@@ -1,0 +1,6 @@
+rootProject.name = 'codeez'
+include 'codeez-dependencies'
+include 'codeez-dto'
+include 'codeez-exception'
+include 'internal-platform'
+

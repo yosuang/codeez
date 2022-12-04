@@ -1,0 +1,50 @@
+ext {
+    moduleProjects = subprojects.findAll { it.name.startsWith("codeez-") }
+    javaProjects = subprojects - project(":internal-platform") - project(":codeez-dependencies")
+}
+
+configure(allprojects) { project ->
+    repositories {
+        maven {
+            credentials {
+                username System.getenv("MAVEN_ALIYUN_USERNAME")
+                password System.getenv("MAVEN_ALIYUN_PASSWORD")
+            }
+            url System.getenv("MAVEN_ALIYUN_REPOSITORY_BASE_URL") + System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_RELEASE")
+        }
+        maven {
+            credentials {
+                username System.getenv("MAVEN_ALIYUN_USERNAME")
+                password System.getenv("MAVEN_ALIYUN_PASSWORD")
+            }
+            url System.getenv("MAVEN_ALIYUN_REPOSITORY_BASE_URL") + System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_SNAPSHOT")
+        }
+        maven {
+            url 'https://maven.aliyun.com/repository/public'
+        }
+        mavenLocal()
+        mavenCentral()
+    }
+}
+
+configure([rootProject] + javaProjects) { project ->
+    group = "com.github.yosuang"
+
+    apply plugin: "java"
+
+    configurations {
+        dependencyManagement {
+            canBeConsumed = false
+            canBeResolved = false
+            visible = false
+        }
+        matching { it.name.endsWith("Classpath") }.all { it.extendsFrom(dependencyManagement) }
+    }
+    dependencies {
+        dependencyManagement(enforcedPlatform(dependencies.project(path: ":internal-platform")))
+    }
+}
+
+configure(rootProject) {
+    description = "Code Easy"
+}
