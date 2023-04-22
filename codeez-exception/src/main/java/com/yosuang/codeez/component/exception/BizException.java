@@ -1,4 +1,4 @@
-package com.limin.component.exception;
+package com.yosuang.codeez.component.exception;
 
 /**
  * BizException is known Exception, no need to retry.

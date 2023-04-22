@@ -1,4 +1,4 @@
-package com.limin.component.exception;
+package com.yosuang.codeez.component.exception;
 
 /**
  * Base Exception is the parent of all exceptions.

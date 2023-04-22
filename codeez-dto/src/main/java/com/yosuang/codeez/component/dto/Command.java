@@ -1,12 +1,12 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 /**
- * 查询对象
+ * 命令对象
  *
  * @author yosuang
  * @date 2022/10/30
  */
-public abstract class Query extends Command {
+public abstract class Command extends DTO {
 
     private static final long serialVersionUID = 1L;
 

@@ -1,4 +1,4 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 /**
  * 分页查询参数

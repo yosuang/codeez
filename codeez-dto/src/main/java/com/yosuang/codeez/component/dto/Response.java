@@ -1,4 +1,4 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 /**
  * 结果返回对象

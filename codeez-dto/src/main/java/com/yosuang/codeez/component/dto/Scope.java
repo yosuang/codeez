@@ -1,13 +1,12 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 /**
- * 命令对象
+ * 结果范围控制
  *
  * @author yosuang
  * @date 2022/10/30
  */
-public abstract class Command extends DTO {
+public abstract class Scope extends DTO {
 
     private static final long serialVersionUID = 1L;
-
 }

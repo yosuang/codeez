@@ -1,4 +1,4 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 /**
  * 单结果返回对象
@@ -6,6 +6,7 @@ package com.limin.component.dto;
  * @author yosuang
  * @date 2022/10/30
  */
+@SuppressWarnings({"rawtypes"})
 public class SingleResponse<T> extends Response {
 
     private static final long serialVersionUID = 1L;

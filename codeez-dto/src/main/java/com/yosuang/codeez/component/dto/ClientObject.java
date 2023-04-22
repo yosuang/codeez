@@ -1,4 +1,4 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 import java.io.Serializable;
 import java.util.HashMap;

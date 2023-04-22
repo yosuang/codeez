@@ -1,4 +1,4 @@
-package com.limin.component.exception;
+package com.yosuang.codeez.component.exception;
 
 /**
  * System Exception is unexpected Exception, retry might work again.

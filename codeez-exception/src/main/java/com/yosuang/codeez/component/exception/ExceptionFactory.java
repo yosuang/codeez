@@ -1,4 +1,4 @@
-package com.limin.component.exception;
+package com.yosuang.codeez.component.exception;
 
 /**
  * 异常工厂

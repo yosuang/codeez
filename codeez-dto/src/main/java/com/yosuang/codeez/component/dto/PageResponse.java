@@ -1,4 +1,4 @@
-package com.limin.component.dto;
+package com.yosuang.codeez.component.dto;
 
 import java.util.ArrayList;
 import java.util.Collection;
