@@ -5,6 +5,7 @@ plugins {
 
 group 'com.yosuang.codeez'
 version '0.0.1-SNAPSHOT'
+description 'codeez denpendencies'
 
 javaPlatform {
     allowDependencies()
@@ -19,8 +20,11 @@ dependencies {
 publishing {
     repositories {
         maven {
-            def repositoryId = version.toString().endsWith('RELEASE') ? System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_RELEASE") : System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_SNAPSHOT")
+            def repositoryId = version.toString().endsWith('RELEASE')
+                    ? System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_RELEASE")
+                    : System.getenv("MAVEN_ALIYUN_REPOSITORY_ID_SNAPSHOT")
             url System.getenv("MAVEN_ALIYUN_REPOSITORY_BASE_URL") + repositoryId
+
             credentials {
                 username System.getenv("MAVEN_ALIYUN_USERNAME")
                 password System.getenv("MAVEN_ALIYUN_PASSWORD")
