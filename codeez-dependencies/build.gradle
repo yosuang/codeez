@@ -3,6 +3,7 @@ plugins {
     id 'java-platform'
 }
 
+group 'com.yosuang.codeez'
 version '0.0.1-SNAPSHOT'
 
 javaPlatform {
@@ -28,10 +29,9 @@ publishing {
     }
     publications {
         mavenJava(MavenPublication) {
-            groupId = 'com.github.yosuang'
-            artifactId = 'codeez-dependencies'
-            version = "${version}"
-            from components.javaPlatform
+            groupId = "$group"
+            version = "$version"
+            artifactId = "$project.name"
         }
     }
 }

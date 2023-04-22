@@ -4,6 +4,9 @@ ext {
 }
 
 configure(allprojects) { project ->
+
+    group = "com.yosuang"
+
     repositories {
         maven {
             credentials {
@@ -28,7 +31,6 @@ configure(allprojects) { project ->
 }
 
 configure([rootProject] + javaProjects) { project ->
-    group = "com.github.yosuang"
 
     apply plugin: "java"
 
@@ -38,7 +40,7 @@ configure([rootProject] + javaProjects) { project ->
             canBeResolved = false
             visible = false
         }
-        matching { it.name.endsWith("Classpath") }.all { it.extendsFrom(dependencyManagement) }
+        matching { it.name.endsWith("Classpath") }.configureEach { it.extendsFrom(dependencyManagement) }
     }
     dependencies {
         dependencyManagement(enforcedPlatform(dependencies.project(path: ":internal-platform")))
