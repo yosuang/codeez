@@ -8,10 +8,10 @@ import java.util.List;
 /**
  * 多结果返回对象
  *
- * @param <T>
  * @author yosuang
  * @date 2022/10/30
  */
+@SuppressWarnings({"rawtypes"})
 public class MultiResponse<T> extends Response {
 
     private static final long serialVersionUID = 1L;

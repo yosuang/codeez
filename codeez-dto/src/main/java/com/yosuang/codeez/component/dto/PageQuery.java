@@ -7,6 +7,7 @@ package com.yosuang.codeez.component.dto;
  * @date 2022/10/30
  */
 public abstract class PageQuery extends Query {
+
     private static final long serialVersionUID = 1L;
 
     public static final String ASC = "ASC";

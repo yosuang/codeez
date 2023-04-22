@@ -11,6 +11,7 @@ import java.util.List;
  * @author yosuang
  * @date 2022/10/30
  */
+@SuppressWarnings({"rawtypes"})
 public class PageResponse<T> extends Response {
 
     private static final long serialVersionUID = 1L;
